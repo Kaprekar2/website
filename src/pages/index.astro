@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import '../styles/global.css'
+import '/website/styles/global.css'
 
 const pageTitle = '髙良力樹';
 ---
@@ -23,24 +23,24 @@ const pageTitle = '髙良力樹';
 			
 			<nav class="nav mx-auto w-full max-w-5xl px-6 relative flex flex-row justify-between py-3 ">
 				<h1>
-					<a href="./" class="name"> TAKARA Riki </a>
+					<a href="/website/" class="name"> TAKARA Riki </a>
 				</h1>
 				<ul class="nav-contents mx-auto px-6 flex gap-6 justify-between font-medium">
 					<li class="inline-flex flex flex-row gap-1">
-						<a href="/about/" class="contents">
-							<img src="../../public/person.svg" width="25" height="25" alt="person">
+						<a href="/website/about/" class="contents">
+							<img src="/website/person.svg" width="25" height="25" alt="person">
 							About
 						</a>
 					</li>
 					<li class="flex flex-row gap-2">
-						<a href="/tech" class="contents">
-							<img src="/public/pc.svg" width="23" height="23" alt="pc">
+						<a href="/website/tech" class="contents">
+							<img src="/website/pc.svg" width="23" height="23" alt="pc">
 							Tech
 						</a>
 					</li>
 					<li class="flex flex-row gap-1">
-						<a href="/blog" class="contents">
-							<img src="/public/pencil.svg" width="25" height="25" alt="memo"> 
+						<a href="/website/blog" class="contents">
+							<img src="/website/pencil.svg" width="25" height="25" alt="memo"> 
 							Blog
 						</a>
 					</li>
@@ -77,20 +77,20 @@ const pageTitle = '髙良力樹';
 		<footer class="ft">
 			<nav class="mx-auto w-full max-w-5xl relative px-7 pt-3.5 pb-6 flex flex-row justify-between border-t item-center">
 				<ul class="blog-contents flex flex-row  justify-between gap-2.5 text-xl">
-					<li><a href="./"> 日 </a> </li>
-					<li><a href="/en"> Eng </a></li>
-					<li><a href="/kr"> 한 </a></li>
+					<li><a href="/website/"> 日 </a> </li>
+					<li><a href="/website/en"> Eng </a></li>
+					<li><a href="/website/kr"> 한 </a></li>
 				</ul>
 				<p class="font-xs text-zinc-300 flex items-center">© 2023 TAKARA Riki</p>
 				<ul class="sns-contents flex justify-between flex-row gap-6 left-0">
 					<li class="pt">
 						<a href={'https://twitter.com/cornetto_alcioc'} target="_blank" rel="noopener noreferrer"> 
-							<img src="../../public/twlogo.svg" width="33" height="33" alt="twitterlogo" >
+							<img src="/website/twlogo.svg" width="33" height="33" alt="twitterlogo" >
 						</a>
 					</li>
 					<li>
 						<a href={'https://github.com/Kaprekar2'} target="_blank" rel="noopener noreferrer"> 
-							<img src="/github.svg" width="28" height="28" alt="githublogo">
+							<img src="/website/github.svg" width="28" height="28" alt="githublogo">
 						</a> 
 					</li>
 				</ul>
