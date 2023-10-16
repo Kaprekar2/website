@@ -1,0 +1,82 @@
+---
+import '../styles/global.css'
+const { langhome } = Astro.props
+const { langabout } = Astro.props
+
+---
+
+<header class="header">
+			
+	<nav class="nav mx-auto w-full max-w-5xl px-6 relative flex flex-row justify-between py-3 ">
+		<h1>
+			<a href={ langhome } class="name"> TAKARA Riki </a>
+		</h1>
+		<ul class="nav-contents mx-auto px-6 flex gap-6 justify-between font-medium">
+			<li class="inline-flex flex flex-row gap-1">
+				<a href={ langabout } class="contents">
+					<img src="/person.svg" width="25" height="25" alt="person">
+					About
+				</a>
+			</li>
+			<li class="flex flex-row gap-2">
+				<a href="/tech" class="contents">
+					<img src="/pc.svg" width="23" height="23" alt="pc">
+					Tech
+				</a>
+			</li>
+			<li class="flex flex-row gap-1">
+				<a href="/blog" class="contents">
+					<img src="/pencil.svg" width="25" height="25" alt="memo"> 
+					Blog
+				</a>
+			</li>
+		</ul>
+	</nav>
+	
+</header>
+
+<style>
+	/*header */
+	.name {
+		text-decoration:none; 
+		color: #1e2022;
+		font-weight: bold;
+		font-size: 35px;
+		margin: 0; 
+		/*padding: 0 100px 0 30px;*/
+	}
+
+	.nav {
+		/*margin: 0 0 0 auto;*/
+		/*display: flex;*/
+		justify-content:space-around;
+		color: #545454; /*contentsの文字色 */
+	}
+
+	.nav ul {
+		list-style: none;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	.nav li {
+		margin: 0 0 0 15px;
+		font-size: 20px;
+	}
+
+	.header {
+		width: 100%;
+		/*padding: 16px 1.5em;*/
+		font-family: Arial, Helvetica, sans-serif;
+		/*background-color: #FDFDFD;*/
+		position: relative;
+		top: 0;
+		align-items: center;
+		font-family: Arial, 'Helvetica', sans-serif;	
+		border-bottom: 1px solid #DDDCDA;
+	}
+
+	.justify-between {
+		justify-content: space-between; /*headerコンテンツを均等に配置 */
+	}
+</style>

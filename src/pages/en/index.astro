@@ -1,0 +1,180 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import '../../styles/global.css'
+
+const pageTitle = 'TAKARA Riki';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+ 		<title>{pageTitle}</title>
+		<ViewTransitions />
+	</head>
+
+	<body>
+		
+		<!---- Header start -->
+
+		<header class="header">
+			
+			<nav class="nav mx-auto w-full max-w-5xl px-6 relative flex flex-row justify-between py-3 ">
+				<h1>
+					<a href="/en" class="name"> TAKARA Riki </a>
+				</h1>
+				<ul class="nav-contents mx-auto px-6 flex gap-6 justify-between font-medium">
+					<li class="inline-flex flex flex-row gap-1">
+						<a href="/en/about" class="contents">
+							<img src="/person.svg" width="25" height="25" alt="person">
+							About
+						</a>
+					</li>
+					<li class="flex flex-row gap-2">
+						<a href="./" class="contents">
+							<img src="/public/pc.svg" width="23" height="23" alt="pc">
+							Tech
+						</a>
+					</li>
+					<li class="flex flex-row gap-1">
+						<a href="/blog/" class="contents">
+							<img src="/public/pencil.svg" width="25" height="25" alt="memo"> 
+							Blog
+						</a>
+					</li>
+				</ul>
+			</nav>
+			
+		</header>
+
+		<!---- main start -->
+		<main id="main" class=" mx-auto w-full max-w-5xl px-6 py-10">
+			<div class="abst flex justify-normal">
+				<img src="../../public/head_img.png" width="400" height="400" alt="man" class="my_img">
+				<div class="sentences  flex flex-col space-y-6 pl-20">
+					<div class="flex flex-row items-end">
+						<p>Name:</p> 
+						<h1 class="font-bold text-4xl pl-2">TAKARA Riki</h1></div>
+					<div class="flex flex-row items-end ">
+						<p>Studying in:</p> 
+						<p class="affiliation text-2xl pl-2">
+							<a href={'http://www.biology.tohoku.ac.jp/english/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">Department of biology, <br>
+								Faculty of Science, <br>
+								Tohoku University</a>
+						</p>
+					</div>
+					<div class="flex flex-row items-end">
+						<p>Email:</p>
+						<p class="mail text-lg pl-2">
+							takara.riki.p3(at)dc.tohoku.ac.jp
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!---footer start -->
+		<footer class="ft">
+			<nav class="mx-auto w-full max-w-5xl relative px-6 py-3 flex flex-row justify-between border-t item-center">
+				<ul class="blog-contents flex flex-row  justify-between gap-2.5 text-xl">
+					<li><a href="./"> 日 </a> </li>
+					<li><a href="/en"> Eng </a></li>
+					<li><a href="/kr"> 한 </a></li>
+				</ul>
+				<p class="font-xs text-zinc-300 flex items-center">© 2023 TAKARA Riki</p>
+				<ul class="sns-contents flex justify-between flex-row gap-6 left-0">
+					<li class="pt">
+						<a href={'https://twitter.com/cornetto_alcioc'} target="_blank" rel="noopener noreferrer"> 
+							<img src="../../public/twlogo.svg" width="33" height="33" alt="twitterlogo" >
+						</a>
+					</li>
+					<li>
+						<a href={'https://github.com/Kaprekar2'} target="_blank" rel="noopener noreferrer"> 
+							<img src="../../public/github.svg" width="28" height="28" alt="githublogo">
+						</a> 
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>
+
+<style>
+	/*header */
+	.name {
+		text-decoration:none; 
+		color: #1e2022;
+		font-weight: bold;
+		font-size: 35px;
+		margin: 0; 
+		/*padding: 0 100px 0 30px;*/
+	}
+
+	.nav {
+		/*margin: 0 0 0 auto;*/
+		/*display: flex;*/
+		justify-content:space-around;
+		color: #545454; /*contentsの文字色 */
+	}
+
+	.nav ul {
+		list-style: none;
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	.nav li {
+		margin: 0 0 0 15px;
+		font-size: 20px;
+	}
+
+	.header {
+		width: 100%;
+		/*padding: 16px 1.5em;*/
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: #FDFDFD;
+		position: relative;
+		top: 0;
+		align-items: center;
+		font-family: Arial, 'Helvetica', sans-serif;	
+		border-bottom: 1px solid #DDDCDA;
+	}
+
+	.justify-between {
+		justify-content: space-between; /*headerコンテンツを均等に配置 */
+	}
+
+	/* main*/
+	#main{
+		/*width: 100%;
+		padding: 100px 300px 100px 300px;*/
+		font-family: 'Noto Sans KR', 'Nanum Gothic', 'Malgun Gothic', sans-serif;
+
+	}
+
+	.centences {
+		color: #1e2022;
+	}
+	
+	.abst {
+		display: flex;
+		align-items: center;
+	}
+
+	 h1.intro{
+		font-weight: bold;
+		font-size: 100px;
+	 }
+
+	 .my_img {
+		border-radius: 10px;
+	 }
+
+	 ul[class~="blog-contents"] {
+		color: #888888;
+	 }
+	 
+
+</style>

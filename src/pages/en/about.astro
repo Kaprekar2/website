@@ -1,0 +1,137 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import '../../styles/global.css'
+
+import Header from '../../components/header.astro';
+import Footer from '../../components/footer.astro'
+
+const pageTitle = 'about';
+const langhome = "/en"
+const langabout = "/en/about"
+
+const jafooter = '/about'
+const engfooter = '/en/about'
+const krfooter = '/kr/about'
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+ 		<title>{pageTitle}</title>
+		<ViewTransitions />
+	</head>
+
+    <body>
+        <Header langhome = {langhome} langabout = {langabout} />  <!---- propsを使ってHomeにルーティング -->
+
+        <main id="main" class=" mx-auto w-full max-w-5xl px-6 py-10">
+			<div class="abst flex justify-normal">
+				<img src="/head_img.png" width="400" height="400" alt="man" class="my_img">
+				<div class="sentences  flex flex-col space-y-6 pl-20">
+					<div class="flex flex-row items-end">
+						<p>Name:</p> 
+						<h1 class="font-bold text-4xl pl-2">TAKARA Riki (髙良力樹)</h1>
+					</div>
+					<div class="flex flex-row items-end">
+						<p>Studying in:</p> 
+						<p class="affiliation text-2xl pl-2">
+							<a href={'http://www.biology.tohoku.ac.jp/english/'} target="_blank" rel="noopener noreferrer">Department of biology, <br>
+								Faculty of Science, <br>
+								Tohoku University</a>
+						</p>
+					</div>
+					<div class="flex flex-row items-end">
+						<p>Email:</p>
+						<p class="mail text-lg pl-2">
+							takara.riki.p3(at)dc.tohoku.ac.jp
+						</p>
+					</div>
+				</div>
+			</div>
+
+            <!----<div class=""> --> 
+            <p class = "text-3xl pt-7 pb-3"> Education </p>
+            <dl class = "text-lg">
+
+                <dt>2020.04 -</dt>
+                <dd>Department of biology, Faculty of Science, Tohoku University</dd>
+
+                <div class = "pt-2">
+                    <dt>2015.04 - 2020.03</dt>
+                    <dd> Department of Bioresources Engineering <br>National Institute of Technology, Okinawa College</dd>
+                </div>
+
+            </dl>
+
+            <p class="text-3xl pt-7 pb-3">Presentations</p>
+
+            <p><strong>Poster</strong></p>
+            <ul class="list-disc pl-6 text-lg">
+                <li>
+                   TAKARA Riki・TAMURA Kouhei・Bessho-Uehara Kanako<br>
+				   Searching plant factor that is defining a form of galls by image and mechanical analyzing <br>
+                    <a href={'https://w3.u-ryukyu.ac.jp/anthropology/shinka2023/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+						<span>Society of Evolutionary Studies, Japan</span>
+					</a>
+                    (2023.8-9) Okinawa
+                </li>
+            </ul>
+
+            <h2 class = "text-3xl pt-7 pb-3"> Academic Societies </h2>
+
+            <ol class="list-disc pl-6 text-lg">
+                <li>
+					<a href={'http://sesj.kenkyuukai.jp/special/?id=26540'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+						<span>Society of Evolutionary Studies, Japan</span>
+					</a>
+				</li>
+            </ol>
+            
+		</main>
+        <Footer jafooter = {jafooter} krfooter = {krfooter} engfooter = {engfooter}/>
+    </body>
+
+
+</html>
+
+
+<style>
+    	/* main*/
+	#main{
+		/*width: 100%;
+		padding: 100px 300px 100px 300px;*/
+		font-family: 'Noto Sans JP', sans-serif;
+
+	}
+
+	.centences {
+		color: #1e2022;
+	}
+	
+	.abst {
+		display: flex;
+		align-items: center;
+	}
+
+	h1.intro{
+	    font-weight: bold;
+		font-size: 100px;
+	}
+
+	.my_img {
+        border-radius: 10px;
+	} 
+    
+    ul[class~="blog-contents"] {
+        color: #888888;
+	}
+
+	span{
+		color: #0B2856;
+	}
+
+</style>

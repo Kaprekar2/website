@@ -1,0 +1,11 @@
+---
+const { title, url, pubDate } = Astro.props;
+---
+
+<li class = "flex flex-col py-3">
+    <span style="font-size: 100%;"> { pubDate } </span>
+    <a href={url}>
+        <span style="font-size: 200%;">{title}</span>
+    </a>
+</li>
+

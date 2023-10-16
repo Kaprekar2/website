@@ -1,0 +1,41 @@
+---
+import '../styles/global.css'
+const platform = "github";
+const username = "Kaprekar2";
+
+const { jafooter } = Astro.props
+const { krfooter } = Astro.props
+const { engfooter } = Astro.props
+---
+
+<footer class="ft">
+    <nav class="mx-auto w-full max-w-5xl relative px-6 pt-3.5 pb-6 flex flex-row justify-between border-t item-center">
+        <ul class="blog-contents flex flex-row  justify-between gap-2.5 text-xl">
+           <!---- <li><a href="/kr"> Home</a> </li>
+            <li><a href="/blog"> Blog </a></li> -->
+            <li><a href={ jafooter }> 日 </a> </li>
+			<li><a href={ engfooter }> Eng </a></li>
+			<li><a href={ krfooter }> 한 </a></li>
+
+        </ul>
+        <p class="font-xs text-zinc-300 flex items-center">© 2023 TAKARA Riki</p>
+        <ul class="sns-contents flex justify-between flex-row gap-6 left-0">
+            <li class="pt">
+                <a href={'https://twitter.com/cornetto_alcioc'} target="_blank" rel="noopener noreferrer"> 
+                    <img src="/twlogo.svg" width="33" height="33" alt="twitterlogo" >
+                </a>
+            </li>
+            <li>
+                <a href={'https://github.com/Kaprekar2'} target="_blank" rel="noopener noreferrer"> 
+                    <img src="/github.svg" width="28" height="28" alt="githublogo">
+                </a> 
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+<style>
+    ul[class~="blog-contents"] {
+	    color: #888888;
+	}
+</style>

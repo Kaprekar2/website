@@ -1,0 +1,61 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import '../styles/global.css'
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+
+const {pageTitle} = Astro.props;
+const langhome = "/"
+const langabout = "/about"
+
+const jafooter = '/'
+const engfooter = '/en'
+const krfooter = '/kr'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+ 		<title>{pageTitle}</title>
+		<ViewTransitions />
+	</head>
+
+	<body>
+		<Header langhome = {langhome} langabout = {langabout}/>
+
+		<!---- main start -->
+		<main id="main" class=" mx-auto w-full max-w-5xl px-6 py-10 items-center">
+			<h1>{pageTitle}</h1>
+            <slot />
+		</main>
+
+		<!---footer start -->
+        <Footer jafooter = {jafooter} krfooter = {krfooter} engfooter = {engfooter} />
+	</body>
+</html>
+
+<style>
+	/*header */
+
+	/* main*/
+    #main{
+		/*width: 100%;
+		padding: 100px 300px 100px 300px;*/
+	    font-family: 'Noto Sans JP', sans-serif;
+        color: #1e2022;
+
+	}
+
+	h1 {
+		font-weight: bold;
+		font-size: 50px;
+	} 
+
+	.affiliation:hover {
+    	@apply bg-sky-400;
+	}
+</style>

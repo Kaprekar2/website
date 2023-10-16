@@ -1,0 +1,22 @@
+---
+
+import BaseLayout from "./BaseLayout.astro";
+const { content } = Astro.props;
+---
+
+<BaseLayout pageTitle={content.title}>
+    <p>著者: {content.author}</p> 
+    <style is:global>
+        .markdown-body ul {
+            @apply list-disc list-inside pl-4 mb-4
+        }
+        .markdown-body h1, h2, h3 {
+            @apply font-bold mb-4
+        }
+        .markdown-body h1, h2 {
+            @apply border-b-2 border-solid border-gray-200 
+        }
+
+    </style>
+    <slot />
+</BaseLayout>

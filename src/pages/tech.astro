@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPost from '../components/BlogPost.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
+const pageTitle = "👷🚧";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <p><span style="font-size: 300%;">現在、このページは工事中です</span></p>
+    <p><span style="font-size: 300%;">The page building is ongoing.</span></p>
+    <p><span style="font-size: 300%;">현재 이 배이지는 공사중 입니다</span></p>
+</BaseLayout>

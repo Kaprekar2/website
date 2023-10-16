@@ -1,0 +1,140 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import '../styles/global.css'
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro'
+
+const pageTitle = 'about';
+const langhome = "/"
+const langabout = "/about"
+
+const jafooter = '/about'
+const engfooter = '/en/about'
+const krfooter = '/kr/about'
+---
+
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+ 		<title>{pageTitle}</title>
+		<ViewTransitions />
+	</head>
+
+    <body>
+        <Header langhome = {langhome} langabout = {langabout}/>
+
+        <main id="main" class=" mx-auto w-full max-w-5xl px-6 py-10">
+			<div class="abst flex justify-normal">
+				<img src="../../public/head_img.png" width="400" height="400" alt="man" class="my_img">
+				<div class="sentences  flex flex-col space-y-6 pl-20">
+					<div class="flex flex-row items-end">
+						<p>名前:</p> 
+						<h1 class="font-bold text-4xl pl-2">髙良 力樹</h1></div>
+					<div class="flex flex-row items-end">
+						<p>所属:</p> 
+						<p class="affiliation text-2xl pl-2">
+							<a href={'http://www.biology.tohoku.ac.jp/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">東北大学理学生物学科</a>
+						</p>
+					</div>
+					<div class="flex flex-row items-end">
+						<p>Email:</p>
+						<p class="mail text-lg pl-2">
+							takara.riki.p3(at)dc.tohoku.ac.jp
+						</p>
+					</div>
+				</div>
+			</div>
+
+            <!----<div class=""> --> 
+            <p class = "text-3xl pt-7 pb-3"> 略歴 </p>
+            <dl class = "text-lg">
+
+                <dt>2020.04 -</dt>
+                <dd>
+					<a href={'http://www.biology.tohoku.ac.jp/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+						<span>東北大学理学部生物学科</span>
+					</a>
+				</dd>
+                <div class = "pt-2">
+                    <dt>2015.04 - 2020.03</dt>
+                    <dd>
+						<a href={'https://www.okinawa-ct.ac.jp/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+							<span>沖縄工業高等専門学校生物資源工学科</span>
+						</a>
+					</dd>
+                </div>
+
+            </dl>
+
+            <p class="text-3xl pt-7 pb-3">発表</p>
+
+            <p><strong>ポスター</strong></p>
+            <ul class="list-disc pl-6 text-lg">
+                <li>
+                    髙良力樹・田村光平・別所-上原奏子 「画像解析と力学解析による虫こぶ形態多様性を規定する植物側要因の探索」 <br>
+					<a href={'https://w3.u-ryukyu.ac.jp/anthropology/shinka2023/'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+					 	<span>日本進化学会第25回大会 </span>
+					</a>
+                    (2023.8-9) 沖縄
+                </li>
+            </ul>
+
+            <h2 class = "text-3xl pt-7 pb-3"> 所属学会 </h2>
+
+            <ol class="list-disc pl-6 text-lg">
+                <li>
+					<a href={'http://sesj.kenkyuukai.jp/special/index.asp?id=1450&ssochecked=checked'} target="_blank" rel="noopener noreferrer" class = "no-underline hover:underline">
+						<span>日本進化学会</span>
+					</a>
+				</li>
+            </ol>
+            
+		</main>
+        <Footer jafooter = {jafooter} krfooter = {krfooter} engfooter = {engfooter}/>
+    </body>
+
+
+</html>
+
+
+<style>
+    	/* main*/
+	#main{
+		/*width: 100%;
+		padding: 100px 300px 100px 300px;*/
+		font-family: 'Noto Sans JP', sans-serif;
+
+	}
+
+	.centences {
+		color: #1e2022;
+	}
+	
+	.abst {
+		display: flex;
+		align-items: center;
+	}
+
+	h1.intro{
+	    font-weight: bold;
+		font-size: 100px;
+	}
+
+	.my_img {
+        border-radius: 10px;
+	} 
+    
+    ul[class~="blog-contents"] {
+        color: #888888;
+	}
+
+	span{
+		color: #0B2856; /*BBCを参考にリンクの色を設定 */
+	}
+
+</style>
